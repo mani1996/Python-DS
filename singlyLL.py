@@ -1,5 +1,32 @@
 __author__ = 'V Manikantan'
 
+
+documentation = '''
+
+DETAILS OF THE METHODS:
+
+1) class Node defines the structure of each node in the singly linked list. Each node has a value and a link to the
+   next element.
+
+2) push_at_end accepts head node and value to be pushed at end. It returns the value of new head pointer after
+   insertion.
+
+3) push_at_beg accepts head node and value to be pushed at beginning . It returns the new head pointe after
+   insertion.
+
+4) del_at accepts the head node(compulsory) , position of node to be deleted(optional, 0 by default) and a parameter
+   is_end (optional, deletes the last node if set to True, irrespective of position argument). It returns the new 
+   head pointer after deletion.
+
+NOTE:
+
+1) If insertion or deletion cannot be performed, the linked list remains in the same state and doesn't raise any
+   exception.
+
+2) If the linked list is empty, the head node will/should be a NoneType object.   
+
+'''
+
 class Node(object):
 	__slots__ = 'data','next'
 
@@ -13,7 +40,6 @@ class Node(object):
 			return 'NULL'
 
 
-# Adds an element at end of linked list and returns new head pointer
 def push_at_end(head,val):
 
 	if(type(val)=='None'):
@@ -34,7 +60,7 @@ def push_at_end(head,val):
 		temp1.next = temp
 		return head
 
-# Adds an element at beginning of linked list and returns head pointer
+
 def push_at_beg(head,val):
 
 	if(type(val)=='None'):
@@ -51,9 +77,9 @@ def push_at_beg(head,val):
 		return temp
 
 
-# Receives position of node to be deleted ( 0 - indexing )
+
 def del_at(head,pos=0,is_end = False):
-	if(pos<0): #Indices to the left of 0 handled here
+	if(pos<0):
 		#print 'Error : Invalid index. Index starts from 0 (inclusive).'
 		#print 'List is restored to the state before this command.'
 		pass
@@ -96,10 +122,9 @@ def del_at(head,pos=0,is_end = False):
 	return head
 
 
-# Traverses the linked list starting from head node
+
 def traverse(head):
 	temp = head
-	
 	while(temp!=None):
 		print temp.data,
 		temp = temp.next
