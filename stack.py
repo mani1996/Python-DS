@@ -20,7 +20,6 @@ NOTE:
 2) If the stack is empty, the top node will/should be a NoneType object.   
 
 '''
-
 #Pushes element on top of stack
 def push(top,val):
 	top = push_at_beg(top,val)
