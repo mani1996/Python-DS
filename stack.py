@@ -1,4 +1,4 @@
-from singlyLL import *
+from singlyLL import push_at_beg,del_at
 
 __author__ = 'V Manikantan'
 
