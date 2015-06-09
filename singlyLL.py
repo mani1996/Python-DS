@@ -5,7 +5,7 @@ documentation = '''
 
 DETAILS OF THE METHODS:
 
-1) class Node defines the structure of each node in the singly linked list. Each node has a value and a link to the
+1) class SinglyLLNode defines the structure of each node in the singly linked list. Each node has a value and a link to the
    next element.
 
 2) push_at_end accepts head node and value to be pushed at end. It returns the value of new head pointer after
@@ -27,7 +27,7 @@ NOTE:
 
 '''
 
-class Node(object):
+class SinglyLLNode(object):
 	__slots__ = 'data','next'
 
 	def __init__(self,data=None,next=None):
@@ -48,7 +48,7 @@ def push_at_end(head,val):
 		return head
 
 	if(head==None):
-		temp = Node(data = val,next = None)
+		temp = SinglyLLNode(data = val,next = None)
 		head = temp
 		return head
 	else:
@@ -56,7 +56,7 @@ def push_at_end(head,val):
 		while(temp1.next!=None):
 			temp1 = temp1.next
 
-		temp = Node(data = val, next = None)
+		temp = SinglyLLNode(data = val, next = None)
 		temp1.next = temp
 		return head
 
@@ -69,11 +69,11 @@ def push_at_beg(head,val):
 		return head
 
 	if(head==None):
-		temp = Node(data = val,next = None)
+		temp = SinglyLLNode(data = val,next = None)
 		head = temp
 		return head
 	else:
-		temp = Node(data = val,next = head)
+		temp = SinglyLLNode(data = val,next = head)
 		return temp
 
 
