@@ -41,7 +41,6 @@ class SinglyLLNode(object):
 
 
 def push_at_end(head,val):
-
 	if(head==None):
 		temp = SinglyLLNode(data = val,next = None)
 		head = temp
