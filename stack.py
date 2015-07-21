@@ -1,6 +1,6 @@
-from singlyLL import push_at_beg,del_at
+from primitives import ListNode
 
-__author__ = 'V Manikantan'
+__author__ = 'V Manikantan and Rishi Rajasekaran'
 
 documentation = '''
 
@@ -20,25 +20,27 @@ NOTE:
 2) If the stack is empty, the top node will/should be a NoneType object.   
 
 '''
-#Pushes element on top of stack
-def push(top,val):
-	top = push_at_beg(top,val)
-	return top
 
-#Pops element from top of stack
-def pop(top):
-	top = del_at(top,0)
-	return top
+class Stack:
+    def __init__(self):
+        self.__top = None
 
-#Returns value of top element in stack
-def top(top):
-	if(top==None):
-		#print 'Error : Stack is empty'
-		return None
-	else:
-		return top.data
+    def push(self, key):
+        self.__top = ListNode(key, self.__top)
 
-
+    def pop(self):
+        if (self.__top != None):
+            self.__top = self.__top.getNext()
+    
+    def top(self):
+        return self.__top
+    
+    def print_stack(self):
+        print "Contents of stack: "
+        it = self.__top
+        while (it != None):
+            print it.getKey()
+            it = it.getNext()
 
 if __name__ == '__main__':
 	pass
