@@ -13,10 +13,7 @@ documentation = '''
 '''
 
 class ListNode:
-    def __init__(self, key):
-        self.__key = key
-        self.__next = None
-    def __init__(self, key, next):
+    def __init__(self, key, next=None):
         self.__key = key
         self.__next = next
 
