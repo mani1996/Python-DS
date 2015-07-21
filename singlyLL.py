@@ -41,12 +41,6 @@ class SinglyLLNode(object):
 
 
 def push_at_end(head,val):
-
-	if(type(val)=='None'):
-		#print 'Error : Data cannot be a NoneType object'
-		#print 'List is restored to the state before this command.'
-		return head
-
 	if(head==None):
 		temp = SinglyLLNode(data = val,next = None)
 		head = temp
@@ -62,12 +56,6 @@ def push_at_end(head,val):
 
 
 def push_at_beg(head,val):
-
-	if(type(val)=='None'):
-		#print 'Error : Data cannot be a NoneType object'
-		#print 'List is restored to the state before this command.'
-		return head
-
 	if(head==None):
 		temp = SinglyLLNode(data = val,next = None)
 		head = temp
