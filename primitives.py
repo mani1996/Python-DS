@@ -14,16 +14,5 @@ documentation = '''
 
 class ListNode:
     def __init__(self, key, next=None):
-        self.__key = key
-        self.__next = next
-
-    def setKey(self, key):
-        self.__key = key
-    def setNext(node):
-        self.__next = node
-
-    def getKey(self):
-        return self.__key
-
-    def getNext(self):
-        return self.__next
+        self.key = key
+        self.next = next 

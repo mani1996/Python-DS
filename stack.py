@@ -23,24 +23,27 @@ NOTE:
 
 class Stack:
     def __init__(self):
-        self.__top = None
+        self.top = None
 
     def push(self, key):
-        self.__top = ListNode(key, self.__top)
+        self.top = ListNode(key, self.top)
 
     def pop(self):
-        if (self.__top != None):
-            self.__top = self.__top.getNext()
+        if (self.top != None):
+            self.top = self.top.next
     
     def top(self):
-        return self.__top
+        return self.top
     
+    def empty(self):
+        return (self.top == None)
+
     def print_stack(self):
         print "Contents of stack: "
-        it = self.__top
+        it = self.top
         while (it != None):
-            print it.getKey()
-            it = it.getNext()
+            print it.key
+            it = it.next
 
 if __name__ == '__main__':
 	pass
