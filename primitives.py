@@ -16,3 +16,9 @@ class ListNode:
     def __init__(self, key, next=None):
         self.key = key
         self.next = next 
+
+class BSTNode:
+	def __init__(self,val):
+		self.value = val
+		self.left = self.right = None
+
