@@ -25,20 +25,20 @@ class Stack:
     def __init__(self):
         self.top = None
 
-    def push(self, key):
+    def Push(self, key):
         self.top = ListNode(key, self.top)
 
-    def pop(self):
+    def Pop(self):
         if (self.top != None):
             self.top = self.top.next
     
-    def top(self):
+    def Top(self):
         return self.top
     
-    def empty(self):
+    def Empty(self):
         return (self.top == None)
 
-    def print_stack(self):
+    def Print_stack(self): 
         print "Contents of stack: "
         it = self.top
         while (it != None):
