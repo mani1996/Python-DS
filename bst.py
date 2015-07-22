@@ -1,9 +1,28 @@
+from primitives import BSTNode
 __author__ = 'V Manikantan'
 
-class bstNode(object):
-	def __init__(self,val):
-		self.value = val
-		self.left = self.right = None
+
+class BST:
+	def __init__(self):
+		self.root = None
+
+	def Insert(self,l):
+		self.root = insert(self.root,val)
+
+	def Check(self,val):
+		return check(self.root,val)
+
+	def Delete(self,val):
+		self.root = delete(self.root,val)
+
+	def Inorder(self):
+		inorder(self.root)
+
+	def Preorder(self):
+		preorder(self.root)
+
+	def Postorder(self):
+		postorder(self.root)
 
 
 #Insert into BST. 
@@ -11,7 +30,7 @@ class bstNode(object):
 #Returns new root node.
 def insert(root,val):
 	if(not root):
-		node = bstNode(val)
+		node = BSTNode(val)
 		return node
 	else:
 		if(val < root.value):
@@ -32,6 +51,7 @@ def check(root,val):
 	else:
 		return False
 
+#Deletes particular node with given value in BST, if it exists
 def delete(root,val):
 	if(root):
 		if(root.value==val):
@@ -75,18 +95,13 @@ def inorder(root):
 def preorder(root):
 	if(root):
 		print root.value,
-		inorder(root.left)
-		inorder(root.right)
+		preorder(root.left)
+		preorder(root.right)
 
 #Postorder traversal of BST.
 #Takes root node as parameter.
 def postorder(root):
 	if(root):
-		inorder(root.left)
-		inorder(root.right)
+		postorder(root.left)
+		postorder(root.right)
 		print root.value,
-
-
-
-
-
