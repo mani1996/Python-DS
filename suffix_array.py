@@ -1,8 +1,17 @@
+__author__ = 'V Manikantan'
+
+documentation = '''
+Create a suffix array object like this
+
+obj = SuffixArray('hello') , where 'hello' is the string for which suffix array is to be created.
+obj.array gives the suffix array
+'''
+
 class SuffixArray(object):
 
 	def __init__(self,s):
 		s = str(s)
-		self.l = self.__suffix_array(s)
+		self.array = self.__suffix_array(s)
 
 	def __suffix_array(self,s):
 		try:
@@ -41,10 +50,4 @@ class SuffixArray(object):
 				k*=2
 			return map(lambda x:x[0],rank)
 		except:
-			return "Something wrong"
-
-'''
-s = raw_input('Enter the string:')
-l = suffix_array(s)
-print l
-'''
+			return "Problem somewhere!"
