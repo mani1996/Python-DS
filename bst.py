@@ -6,7 +6,7 @@ class BST:
 	def __init__(self):
 		self.root = None
 
-	def Insert(self,l):
+	def Insert(self,val):
 		self.root = insert(self.root,val)
 
 	def Check(self,val):
